@@ -150,7 +150,20 @@ footer img {
     100% { transform: translateX(0); }
   }
    /* Ajuste do título no mobile */
-   header h1 {
+  header h1 {
     font-size: 1.5rem; /* Define um tamanho menor para o título */
   }
+
+  /* Ajuste da logo no mobile */
+  header {
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    text-align: center; /* Centraliza o conteúdo */
+  }
+
+  header img {
+    margin-bottom: 10px; /* Espaço entre a logo e o título */
+    width: 120px; /* Aumenta a largura da logo */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
 }
