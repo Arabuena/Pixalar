@@ -50,6 +50,67 @@
       color: #e0e0e0;
     }
 
+    /* Seção de banner */
+    .banner-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      position: relative;
+    }
+
+    .slideshow-container {
+      width: 100%;
+      max-width: 800px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 0 auto;
+    }
+
+    .slideshow {
+      width: 3200px; /* 800px * 4 banners */
+      height: 300px;
+      display: flex;
+      position: relative;
+      background-image: url('images/banner-sprite.png');
+      background-size: 3200px 300px;
+      animation: slide 12s infinite;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-800px); }
+      50% { transform: translateX(-1600px); }
+      75% { transform: translateX(-2400px); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Botões para navegação */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 5px;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
     /* Seções */
     section {
       max-width: 1200px;
@@ -76,7 +137,6 @@
       position: relative;
     }
 
-    /* Ícones dos serviços */
     .service .icon {
       width: 80px;
       height: 94px;
@@ -85,7 +145,6 @@
       background-size: 400px 400px;
     }
 
-    /* Coordenadas específicas para cada serviço */
     .service.web-design .icon {
       background-position: 0px -106px;
     }
@@ -102,7 +161,6 @@
       background-position: -236px -204px;
     }
 
-    /* Títulos e descrições dos serviços */
     .service h3 {
       font-size: 1.5rem;
       color: #007bff;
@@ -165,6 +223,13 @@
       <p>Blogs, sites e lojas virtuais para transformar sua presença online.</p>
     </div>
   </header>
+
+  <!-- Seção de Banner -->
+  <div class="banner-container">
+    <div class="slideshow-container">
+      <div class="slideshow"></div>
+    </div>
+  </div>
 
   <!-- Seção de serviços -->
   <section>

@@ -1,162 +1,152 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-header .banner {
-  position: relative;
-  text-align: center;
+/* Estilo base */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(90deg, #007bff, #0056b3);
   color: #fff;
-  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header .banner img {
+header img {
+  height: 70px;
+  margin-right: 20px;
+}
+
+.header-content {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* Banner */
+.banner-container {
   width: 100%;
-  height: auto;
-  filter: brightness(70%);
-}
-
-header .banner h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px 40px;
-  border-radius: 8px;
-  font-size: 2.8rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.container {
   max-width: 1200px;
-  margin: auto;
+  margin: 20px auto;
   padding: 20px;
 }
 
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #444;
-  margin-bottom: 1rem;
+.slideshow-container {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto; /* Centraliza horizontalmente */
+  display: block; /* Garante o comportamento correto */
 }
 
-p {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #555;
+
+.slideshow {
+  width: 3200px;
+  height: 300px;
+  display: flex;
+  background-image: url('images/banner-sprite.png');
+  background-size: 3200px 300px;
+  animation: slide 12s infinite;
 }
 
-section {
-  padding: 40px 20px;
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-800px); }
+  50% { transform: translateX(-1600px); }
+  75% { transform: translateX(-2400px); }
+  100% { transform: translateX(0); }
 }
 
-.cards {
+/* Serviços */
+.services {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-.card {
+.service {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-  width: 100%;
-  border-bottom: 1px solid #ddd;
-}
-
-.card h3 {
-  margin: 16px 0;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.card p {
-  padding: 0 16px 16px;
-  font-size: 1rem;
-  color: #666;
-}
-
-form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-form label {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-  display: block;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
 }
 
-form button {
-  background: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
+.service .icon {
+  width: 80px;
+  height: 94px;
+  margin: 0 auto 10px;
+  background-image: url('images/sprite-image.png');
+  background-size: 400px 400px;
 }
 
-form button:hover {
-  background: #0056b3;
+.service.web-design .icon {
+  background-position: 0px -106px;
 }
 
+.service.ecommerce .icon {
+  background-position: 4px -204px;
+}
+
+.service.blogs .icon {
+  background-position: -316px -204px;
+}
+
+.service.customization .icon {
+  background-position: -236px -204px;
+}
+
+/* Rodapé */
 footer {
-  background: #333;
+  background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
+footer img {
+  height: 50px;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  header .banner h1 {
-    font-size: 2rem;
-    padding: 15px 30px;
+  .slideshow {
+    background-image: url('images/mobile-banner-sprite.png');
+    background-size: 1600px 300px;
   }
 
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  form {
-    padding: 15px;
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-400px); }
+    50% { transform: translateX(-800px); }
+    75% { transform: translateX(-1200px); }
+    100% { transform: translateX(0); }
   }
 }
