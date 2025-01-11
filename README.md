@@ -29,7 +29,7 @@ Aqui está uma prévia do site:
 
 ## 🚀 Como Visualizar o Site
 
-Você pode visualizar o site hospedado em [GitHub Pages](https://seuusuario.github.io/pixelar-servicos-web/). 
+Você pode visualizar o site hospedado em [GitHub Pages](https://pixalar-arabuenas-projects.vercel.app/). 
 
 ---
 
