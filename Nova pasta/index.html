@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixelar - Serviços Web</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilo base */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      height: 70px;
+      margin-right: 20px;
+    }
+
+    .header-content {
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #e0e0e0;
+    }
+
+    /* Seções */
+    section {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    /* Serviços - Layout Flexível */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .service {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Ícones dos serviços */
+    .service .icon {
+      width: 80px;
+      height: 94px;
+      margin: 0 auto 10px;
+      background-image: url('images/sprite-image.png');
+      background-size: 400px 400px;
+    }
+
+    /* Coordenadas específicas para cada serviço */
+    .service.web-design .icon {
+      background-position: 0px -106px;
+    }
+
+    .service.ecommerce .icon {
+      background-position: 4px -204px;
+    }
+
+    .service.blogs .icon {
+      background-position: -316px -204px;
+    }
+
+    .service.customization .icon {
+      background-position: -236px -204px;
+    }
+
+    /* Títulos e descrições dos serviços */
+    .service h3 {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      header img {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
+      .service {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="images/logo-pixelar.png" alt="Logo Pixelar">
+    <div class="header-content">
+      <h1>Pixelar - Serviços de Criação Digital</h1>
+      <p>Blogs, sites e lojas virtuais para transformar sua presença online.</p>
+    </div>
+  </header>
+
+  <!-- Seção de serviços -->
+  <section>
+    <h2 style="text-align:center; margin-bottom: 20px;">Nossos Serviços</h2>
+    <div class="services">
+      <div class="service web-design">
+        <div class="icon"></div>
+        <h3>Design de Websites</h3>
+        <p>Criamos sites modernos e responsivos para destacar sua marca.</p>
+      </div>
+
+      <div class="service ecommerce">
+        <div class="icon"></div>
+        <h3>Lojas Virtuais</h3>
+        <p>Implementação de e-commerce com design atrativo e funcionalidades.</p>
+      </div>
+
+      <div class="service blogs">
+        <div class="icon"></div>
+        <h3>Criação de Blogs</h3>
+        <p>Desenvolvemos blogs otimizados para engajamento e SEO.</p>
+      </div>
+
+      <div class="service customization">
+        <div class="icon"></div>
+        <h3>Personalização</h3>
+        <p>Adaptamos o design e as funcionalidades ao seu negócio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <img src="images/logo-pixelar.png" alt="Logo Pixelar">
+    <p>&copy; 2025 Pixelar. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
