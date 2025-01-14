@@ -86,9 +86,15 @@
     </div>
   </div>
 </section>
+
 <section id="contato" class="contact-section">
   <h2>Contato</h2>
-  <form action="mailto:ara100limite@gmail.com" method="post" enctype="text/plain">
+  <form action="https://formsubmit.co/ara100limite@gmail.com" method="POST">
+      <!-- Proteção contra spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirecionamento após envio -->
+      <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+      
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
       
@@ -107,7 +113,6 @@
       </a>
   </div>
 </section>
-
 
   <!-- Rodapé -->
   <footer>
