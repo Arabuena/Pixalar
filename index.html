@@ -87,13 +87,12 @@
   </div>
 </section>
 
+
 <section id="contato" class="contact-section">
   <h2>Contato</h2>
-  <form action="https://formsubmit.co/ara100limite@gmail.com" method="POST">
+  <form id="contactForm" action="https://formsubmit.co/ara100limite@gmail.com" method="POST">
       <!-- Proteção contra spam -->
       <input type="hidden" name="_captcha" value="false">
-      <!-- Redirecionamento após envio -->
-      <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
       
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
@@ -106,13 +105,43 @@
       
       <button type="submit">Enviar</button>
   </form>
-  <div class="whatsapp">
+  <div id="successMessage" style="display: none; color: green; margin-top: 10px;">
+      Sua mensagem foi enviada com sucesso!
+  </div>
+  <div class="whatsapp" style="margin-top: 20px;">
       <a href="https://wa.me/5562984162844" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24" />
           Fale conosco pelo WhatsApp
       </a>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      // Envia os dados via fetch
+      fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+      })
+      .then(response => {
+          if (response.ok) {
+              // Exibe mensagem de sucesso
+              successMessage.style.display = 'block';
+              form.reset(); // Reseta os campos do formulário
+          } else {
+              alert('Ocorreu um erro ao enviar sua mensagem. Tente novamente.');
+          }
+      })
+      .catch(() => {
+          alert('Ocorreu um erro ao enviar sua mensagem. Verifique sua conexão e tente novamente.');
+      });
+  });
+</script>
 
   <!-- Rodapé -->
   <footer>
