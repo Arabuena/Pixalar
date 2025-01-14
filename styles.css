@@ -271,11 +271,11 @@ footer img {
   }
 }
 
-<style>
+
   /* Estilo da seção de plugins */
   .plugins-section {
     padding: 40px 20px;
-    background-color: #f9f9f9;
+   /* background-color: #f9f9f9;*/
     text-align: center;
     border-top: 2px solid #ddd;
   }
@@ -330,28 +330,25 @@ footer img {
     transition: background-color 0.3s;
   }
 
-.important-notice p {
-  margin: 0;
-}
-.important-notice {
-  background-color: #fff;
-  padding: 15px;
-  border: 2px solid #f1c40f;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #333;
-  font-size: 1.1rem;
-  margin: 20px 0;
-  text-align: center;
-}
-
-.important-notice p {
-  margin: 0;
-}
-
-
-
-</style>
+  .btn-plugin:hover {
+    background-color: #0056b3;
+  }
+  
+  .important-notice {
+    background-color: #fff;
+    padding: 15px;
+    border: 2px solid #f1c40f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .important-notice p {
+    margin: 0;
+  }
 
 /* Responsividade */
 @media (max-width: 768px) {
