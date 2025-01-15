@@ -352,6 +352,7 @@ footer img {
 
 
  /* Seção de Jogos */
+/* Seção de Jogos */
 .jogos-section {
   padding: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -370,8 +371,12 @@ footer img {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 80px; /* Espaço interno maior */
-  height: 800px; /* Altura mais alta para cada jogo */
+  padding: 30px; /* Espaço interno */
+  height: auto; /* Altura dinâmica */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .jogo h3 {
@@ -382,7 +387,7 @@ footer img {
 
 .jogo iframe {
   width: 100%;
-  height: 700px; /* Altura ajustada para acompanhar o novo tamanho */
+  aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
   border: none;
   border-radius: 5px;
 }
@@ -390,22 +395,21 @@ footer img {
 /* Ajuste mobile para jogos */
 @media (max-width: 768px) {
   .jogos-container {
-      grid-template-columns: 1fr; /* Um jogo por linha */
+    grid-template-columns: 1fr; /* Um jogo por linha */
   }
 
   .jogo {
-      padding: 30px; /* Aumenta o espaço interno no mobile */
+    padding: 20px; /* Reduz espaço interno no mobile */
   }
 
   .jogo h3 {
-      margin-bottom: 15px; /* Ajusta o espaço inferior do título */
+    margin-bottom: 15px; /* Ajusta o espaço inferior do título */
   }
 
   .jogo iframe {
-      height: 500px; /* Ajusta a altura do iframe no mobile */
+    aspect-ratio: 4 / 3; /* Ajusta a proporção no mobile */
   }
 }
-
 
 
 
