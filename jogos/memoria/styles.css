@@ -1,3 +1,4 @@
+/* Estilo base */
 body {
     display: flex;
     justify-content: center;
@@ -8,6 +9,7 @@ body {
     margin: 0;
 }
 
+/* Container do jogo */
 .container {
     text-align: center;
     max-width: 600px;
@@ -17,11 +19,13 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Título */
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
+/* Botão de iniciar jogo */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -36,6 +40,7 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Tabuleiro do jogo */
 .game-board {
     display: flex;
     flex-wrap: wrap;
@@ -43,6 +48,7 @@ button:hover {
     margin-top: 20px;
 }
 
+/* Cartões */
 .card {
     width: 100px;
     height: 100px;
@@ -67,7 +73,9 @@ button:hover {
     transform: rotateY(180deg);
 }
 
-.front-face, .back-face {
+/* Faces dos cartões */
+.front-face,
+.back-face {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -94,6 +102,11 @@ button:hover {
     border-radius: 8px;
 }
 
-.card.flipped .back-face {
-    transform: rotateY(0deg);
+/* Ajuste para dispositivos móveis */
+@media (max-width: 600px) {
+    .card {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+    }
 }

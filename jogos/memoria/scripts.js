@@ -31,18 +31,21 @@ function startGame() {
         cardElement.classList.add('card');
         cardElement.dataset.id = card.id;
 
+        const cardInner = document.createElement('div');
+        cardInner.classList.add('card-inner');
+
         const frontFace = document.createElement('div');
         frontFace.classList.add('front-face');
-        cardElement.appendChild(frontFace);
+        cardInner.appendChild(frontFace);
 
         const backFace = document.createElement('div');
         backFace.classList.add('back-face');
         const image = new Image();
         image.src = card.image;
-        image.alt = `Card ${card.id}`;
         backFace.appendChild(image);
-        cardElement.appendChild(backFace);
+        cardInner.appendChild(backFace);
 
+        cardElement.appendChild(cardInner);
         cardElement.addEventListener('click', flipCard);
         gameBoard.appendChild(cardElement);
     });
