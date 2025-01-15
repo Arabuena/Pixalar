@@ -350,6 +350,42 @@ footer img {
     margin: 0;
   }
 
+  .jogos-section {
+    padding: 20px;
+    /*background-color: #fff; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .jogos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .jogo {
+    text-align: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  .jogo h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #007bff;
+  }
+  
+  .jogo iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+
 /* Responsividade */
 @media (max-width: 768px) {
   .slideshow {
